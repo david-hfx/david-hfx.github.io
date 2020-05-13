@@ -118,17 +118,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a>
 
   </li>
   </ul>
@@ -152,6 +152,86 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/13/jupyter%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://q8k79b5fk.bkt.clouddn.com/FvQfJEnW48SZ9Z60cxRuMpUHvZ17">
+      <meta itemprop="name" content="David Xu">
+      <meta itemprop="description" content="Life is beautiful.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="David">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/13/jupyter%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E4%BD%8D%E7%BD%AE/" class="post-title-link" itemprop="url">jupyter修改默认位置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-13 20:46:12 / 修改时间：21:52:35" itemprop="dateCreated datePublished" datetime="2020-05-13T20:46:12+08:00">2020-05-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="jupyter-notebook修改默认位置"><a href="#jupyter-notebook修改默认位置" class="headerlink" title="jupyter notebook修改默认位置"></a>jupyter notebook修改默认位置</h1><p>jupyter notebook默认位置为<code>%USERFILE%</code>，即<code>c:\user\your-user-name</code></p>
+<p>修改默认位置很简单，只要遵循以下步骤</p>
+<ol>
+<li>找到jupyter notebook的快捷方式（可通过win10开始菜单anaconda菜单下的jupyter notebook快捷方式右键打开文件位置）</li>
+<li>右键属性，修改快捷方式-目标栏最后的<code>&quot;%USERFILE%&quot;</code>为你需要的位置，比如<code>&quot;d:\coding&quot;</code>,并将起始位置修改为<code>d:\coding</code>，注意双引号的有无，前面需要加双引号，后面不需要</li>
+<li>打开cmd，输入<code>jupyter notebook</code>检查默认位置是否修改成功</li>
+</ol>
+<h1 id="jupyter-lab"><a href="#jupyter-lab" class="headerlink" title="jupyter lab"></a>jupyter lab</h1><ol>
+<li>打开<code>C:\ProgramData\Anaconda3\etc\jupyter\jupyter_notebook_config.json</code></li>
+<li>输入<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"NotebookApp"</span>: &#123;</span><br><span class="line">        <span class="attr">"nbserver_extensions"</span>: &#123;</span><br><span class="line">            <span class="attr">"jupyterlab"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"notebook_dir"</span>: <span class="string">"d:/coding"</span> # 你需要修改的默认位置</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>如果文件无法保存，就先另存到桌面，然后剪切覆盖到原位置即可</li>
+<li>打开cmd，输入<code>jupyter lab</code>检查默认位置是否修改成功</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -381,20 +461,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
